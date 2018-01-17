@@ -65,3 +65,12 @@ public class AweTag {
         return this.layers and #invisible !in this.layers;
     }
 }
+
+{
+    for (snapper in activeSpace.snappers) {
+        if (snapper as TaggableSnapper) {
+            snapper.resetItemTags();
+            snapper.createItemTags();
+        }
+    }
+}
